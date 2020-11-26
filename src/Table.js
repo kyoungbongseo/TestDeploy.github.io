@@ -148,7 +148,6 @@ const TableBody = (props) => {
   return <tbody>{rows}</tbody>;
 }
 
-
 export default Table;
 
 
