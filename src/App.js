@@ -1,8 +1,8 @@
-//import logo from './logo.svg'
-import './App.css'
-import React, {Component} from 'react'
+import React, { Component } from "react";
+import Table from "./Table";
+import Form from "./Form";
 
-//const heading = <h1 className="site-heading">Hello, React</h1>      // JSX 
+//const heading = <h1 className="site-heading">Hello, React</h1>      // JSX
 //const heading = React.createElement('h1', {className: 'site-heading'}, 'Hello, React!') // JS
 
 //{{
@@ -17,13 +17,10 @@ class App extends Component {
   }
 }
 */
-//}}
-
+/////////////////////}}
 
 //{{
 /*
-import Table from './Table'
-
 class App extends Component {
   render() {
     return (
@@ -34,13 +31,10 @@ class App extends Component {
   }
 }
 */
-//}}
-
+/////////////////////}}
 
 //{{
 /*
-import Table from './Table'
-
 class App extends Component {
   render() {
     const characters = [
@@ -70,159 +64,45 @@ class App extends Component {
   }
 }
 */
-//}}
-
-
-//{{
-/*
-import Table from './Table'
-
-class App extends Component {
-  render() {
-    const characters = [
-      {
-        name: 'Charlie',
-        job: 'Janitor',
-      },
-      {
-        name: 'Mac',
-        job: 'Bouncer',
-      },
-      {
-        name: 'Dee',
-        job: 'Aspring actress',
-      },
-      {
-        name: 'Dennis',
-        job: 'Bartender',
-      },
-    ]
-
-    return (
-      <div className="container">
-        <Table characterData={characters} />
-      </div>
-    )
-  }
-}
-*/
-//}}
-
+/////////////////////}}
 
 //{{
-/*
-import Table from './Table'
-
 class App extends Component {
-  state = {
-    characters: [
-      {
-        name: 'Charlie',
-        job: 'Janitor',
-      },
-      {
-        name: 'Mac',
-        job: 'Bouncer',
-      },
-      {
-        name: 'Dee',
-        job: 'Aspring actress',
-      },
-      {
-        name: 'Dennis',
-        job: 'Bartender',
-      },
-    ],
-  }
+	state = {
+		characters: [],
+	};
 
-  removeCharacter = (index) => {
-    const {characters} = this.state
-    this.setState({
-      characters: characters.filter((charater, i) => {
-        return i !== index
-      }),
-    })
-  }
+	removeCharacter = (index) => {
+		const { characters } = this.state;
 
-  render() {
-    const { characters } = this.state
-    return (
-      <div className="container">
-          <Table characterData={characters} removeCharacter={this.removeCharacter} />
-      </div>
-    )
-  }
+		this.setState({
+			characters: characters.filter((character, i) => {
+				return i !== index;
+			}),
+		});
+	};
+
+	handleSubmit = (character) => {
+		this.setState({ characters: [...this.state.characters, character] });
+	};
+
+	render() {
+		const { characters } = this.state;
+
+		return (
+			<div className="container">
+				<h1>React Tutorial 1</h1>
+				<p>Add a character with a name and a job to the table.</p>
+				<Table
+					characterData={characters}
+					removeCharacter={this.removeCharacter}
+				/>
+				<h3>Add New</h3>
+				<Form handleSubmit={this.handleSubmit} />
+			</div>
+		);
+	}
 }
-*/
-//}}
-
-
-//{{
-import Table from './Table'
-import Form from './Form'
-
-class App extends Component {
-  state = {
-    characters: [],
-  }
-
-  removeCharacter = (index) => {
-    const {characters} = this.state
-    this.setState({
-      characters: characters.filter((charater, i) => {
-        return i !== index
-      }),
-    })
-  }
-
-  handleSubmit = (charater) => {
-    this.setState({characters: [...this.state.characters, charater]})
-  }
-
-  render() {
-    const { characters } = this.state
-    return (
-      <div className="container">
-          <Table characterData={characters} removeCharacter={this.removeCharacter} />
-          <Form handleSubmit={this.handleSubmit} />
-      </div>
-    )
-  }
-}
-//}}
-
-
-//{{
-  /*
-class App extends Component {
-  state = {
-      data: [],
-  }
-
-  // Code is invoked after the component is mounte/inserted into the DOM tree.abs
-  componentDidMount() {
-      const url = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=Seona+Dancing&format=json&origin=*'
-
-      fetch(url)
-          .then((result) => result.json())
-          .then((result) => {
-              this.setState({
-                  data: result,
-              })
-          })
-  }
-
-  render() {
-      const {data} = this.state
-
-      const result = data.map((entry, index) => {
-          return <li key={index}>{entry}</li>
-      })
-
-      return <ul>{result}</ul>
-  }
-}
-*/
-//}}
+/////////////////////}}
 
 export default App;
