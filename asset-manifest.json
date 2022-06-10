@@ -1,20 +1,13 @@
 {
   "files": {
-    "main.css": "/TestDeploy.github.io/static/css/main.2a288560.chunk.css",
-    "main.js": "/TestDeploy.github.io/static/js/main.de3d0b4f.chunk.js",
-    "main.js.map": "/TestDeploy.github.io/static/js/main.de3d0b4f.chunk.js.map",
-    "runtime-main.js": "/TestDeploy.github.io/static/js/runtime-main.9112293d.js",
-    "runtime-main.js.map": "/TestDeploy.github.io/static/js/runtime-main.9112293d.js.map",
-    "static/js/2.aa22babb.chunk.js": "/TestDeploy.github.io/static/js/2.aa22babb.chunk.js",
-    "static/js/2.aa22babb.chunk.js.map": "/TestDeploy.github.io/static/js/2.aa22babb.chunk.js.map",
-    "index.html": "/TestDeploy.github.io/index.html",
-    "static/css/main.2a288560.chunk.css.map": "/TestDeploy.github.io/static/css/main.2a288560.chunk.css.map",
-    "static/js/2.aa22babb.chunk.js.LICENSE.txt": "/TestDeploy.github.io/static/js/2.aa22babb.chunk.js.LICENSE.txt"
+    "main.css": "/static/css/main.4b5987a3.css",
+    "main.js": "/static/js/main.57472133.js",
+    "index.html": "/index.html",
+    "main.4b5987a3.css.map": "/static/css/main.4b5987a3.css.map",
+    "main.57472133.js.map": "/static/js/main.57472133.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.9112293d.js",
-    "static/js/2.aa22babb.chunk.js",
-    "static/css/main.2a288560.chunk.css",
-    "static/js/main.de3d0b4f.chunk.js"
+    "static/css/main.4b5987a3.css",
+    "static/js/main.57472133.js"
   ]
 }
